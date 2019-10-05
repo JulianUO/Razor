@@ -201,7 +201,7 @@ namespace Assistant
             }
         }
 
-        public string KeyString()
+        public string KeyString(bool smallNames = false)
         {
             if (Key != 0)
             {
@@ -210,7 +210,8 @@ namespace Assistant
 
                 if ((Mod & ModKeys.Control) != 0)
                 {
-                    sb.Append("Control");
+                    sb.Append(smallNames ? "Ctrl" : "Control");
+
                     np = true;
                 }
 
@@ -226,7 +227,7 @@ namespace Assistant
                 {
                     if (np)
                         sb.Append("+");
-                    sb.Append("Shift");
+                    sb.Append(smallNames ? "Sft" : "Shift");
                     np = true;
                 }
 
@@ -633,7 +634,23 @@ namespace Assistant
                     KeyData hk = (KeyData) m_List[i];
                     if (hk.Mod == cur && hk.Key > 0)
                     {
-                        if (hk.Key == key || KeyDown((Keys) hk.Key))
+                        if (hk.Key == key)
+                        {
+                            if (Macros.MacroManager.AcceptActions)
+                                Macros.MacroManager.Action(new Macros.HotKeyAction(hk));
+                            hk.Callback();
+                            return hk.SendToUO;
+                        }
+                    }
+                }
+
+                // if pressed key didn't match a hotkey, check for any key currently down
+                for (int i = 0; i < m_List.Count; i++)
+                {
+                    KeyData hk = (KeyData) m_List[i];
+                    if (hk.Mod == cur && hk.Key > 0)
+                    {
+                        if (KeyDown((Keys) hk.Key))
                         {
                             if (Macros.MacroManager.AcceptActions)
                                 Macros.MacroManager.Action(new Macros.HotKeyAction(hk));
