@@ -4308,7 +4308,7 @@ namespace Assistant
             this.linkLabel1.Size = new System.Drawing.Size(506, 20);
             this.linkLabel1.TabIndex = 20;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://www.uorenaissance.com";
+            this.linkLabel1.Text = "http://www.uoascension.ga";
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
@@ -4329,7 +4329,7 @@ namespace Assistant
             this.aboutSubInfo.Name = "aboutSubInfo";
             this.aboutSubInfo.Size = new System.Drawing.Size(506, 19);
             this.aboutSubInfo.TabIndex = 17;
-            this.aboutSubInfo.Text = "UO Renaissance Community Edition";
+            this.aboutSubInfo.Text = "UO Razor Community Edition";
             this.aboutSubInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkMain
@@ -8950,7 +8950,7 @@ namespace Assistant
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("http://www.uorenaissance.com");
+            Process.Start("http://www.uoascension.com");
         }
 
         private void targetByTypeDifferent_CheckedChanged(object sender, EventArgs e)

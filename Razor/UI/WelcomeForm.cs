@@ -664,15 +664,13 @@ namespace Assistant
         {
             Custom_SE cse;
             // Always add the default UOR servers
-            serverList.Items.Add(cse = new Custom_SE("UO Renaissance (Prod)", "login.uorenaissance.com", 2593));
+            serverList.Items.Add(cse = new Custom_SE("UO Ascension [ALPHA]", "server.uoascension.ga", 2593));
 
             if (serverList.SelectedItem == null)
             {
                 serverList.SelectedItem = cse;
             }
 
-            serverList.Items.Add(new Custom_SE("UO Renaissance (Test)", "test.uorenaissance.com", 2597));
-            serverList.Items.Add(new Custom_SE("UO Renaissance (Dev)", "dev.uorenaissance.com", 2598));
         }
 
         private System.Windows.Forms.Timer _ShowTimer;
