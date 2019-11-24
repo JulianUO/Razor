@@ -664,7 +664,7 @@ namespace Assistant
         {
             Custom_SE cse;
             // Always add the default UOR servers
-            serverList.Items.Add(cse = new Custom_SE("UO Ascension [ALPHA]", "server.uoascension.ga", 2593));
+            serverList.Items.Add(cse = new Custom_SE("UO Ascension [ALPHA]", "server.uoascension.com", 2593));
 
             if (serverList.SelectedItem == null)
             {

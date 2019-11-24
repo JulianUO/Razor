@@ -4320,7 +4320,7 @@ namespace Assistant
             this.linkLabel1.Size = new System.Drawing.Size(506, 20);
             this.linkLabel1.TabIndex = 20;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://www.uoascension.ga";
+            this.linkLabel1.Text = "http://www.uoascension.com";
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
